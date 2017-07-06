@@ -8,7 +8,7 @@ Cercas Centurion - Cotizacion
 #include <cctype>
 using namespace std;
 #include "Clases.h"
-Producto Cercas[33];
+Producto Cercas[32];
 
 void leeInventario (string sArch) {
     fstream archIn;
@@ -16,22 +16,18 @@ void leeInventario (string sArch) {
 
     string sNom;
     double dA, dL, dP;
-    int i, k;
+    int i=0, k;
     if (sArch=="Inventario/Cercas.txt") {
-        i=0;
         while (getline (archIn,sNom)) {
             cout <<sNom <<endl;
+            //cout <<archIn.peek () <<" " <<isdigit (archIn.peek ()) <<endl;
             if (isdigit (archIn.peek ())) {
                 while (archIn >>dA >>dL >>dP) {
-                    //cout <<i <<" " <<dA <<" " <<dL <<" " <<dP <<endl;
-                    /*
-                    Cercas[i] = new Producto (sNom,dA,dL,dP);
-                    cout <<Cercas[i].getNom () <<"\t"
-                    <<Cercas[i].getAltura () <<"\t"
-                    <<Cercas[i].getLargo () <<"\t"
-                    <<Cercas[i].getPrecio () <<endl;
-                    */
+                    cout <<i <<" " <<dA <<" " <<dL <<" " <<dP <<endl;
                     i++;
+                    //cout <<archIn.peek () <<" " <<isdigit (archIn.peek ()) <<endl;
+                    if (!isdigit (archIn.peek ()))
+                        break;
                 }
             }
         }
