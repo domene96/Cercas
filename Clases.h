@@ -24,17 +24,17 @@ class Producto {
         double getAltura () {return dA;};
         double getLargo () {return dL;};
         double getPrecio () {return dP;};
-        void operator = (Producto);
+        void operator= (Producto);
     private:
         string sNom;
         double dA, dL, dP;
 };
 
-void Producto:: operator = (Producto a) {
-    sNom = a.sNom;
-    dA = a.dA;
-    dL = a.dL;
-    dP = a.dP;
+void Producto::operator= (Producto a) {
+    this->sNom = a.sNom;
+    this->dA = a.dA;
+    this->dL = a.dL;
+    this->dP = a.dP;
 }
 
 ///////////////////POSTE////////////////////
