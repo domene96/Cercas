@@ -15,7 +15,7 @@ void leeInventario (string sArch) {
     fstream archIn;
     archIn.open (sArch.c_str ());
 
-    Producto tmp;
+    Producto *tmp;
     string sNom;
     double dA, dL, dP;
     int i=0, k;
