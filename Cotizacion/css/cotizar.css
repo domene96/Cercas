@@ -1,0 +1,68 @@
+/* Basic stylings */
+h2 		 {
+  text-align:center;
+  margin-bottom:50px;
+}
+h2 small {
+  font-weight:normal;
+  color:green;
+  display:block;
+}
+
+/* DIVS */
+div {
+    margin: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+}
+/*
+.Cliente {
+    border: 1px solid black;
+    width: 250px;
+    float: left;
+}
+.Mts {
+    border: 1px solid black;
+    width: 250px;
+    float: left;
+}
+.CI {
+    border: 1px solid black;
+    width: 250px;
+    float: left;
+}
+.cercas {
+
+}
+*/
+
+/* FORM starting stylings */
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:200px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL */
+label 				 {
+  color:gray;
+  font-size:18px;
+  font-weight:normal;
+  position:relative;
+  pointer-events:none;
+  left:5px;
+  top:-20px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-60px;
+  font-size:14px;
+  color:green;
+}
